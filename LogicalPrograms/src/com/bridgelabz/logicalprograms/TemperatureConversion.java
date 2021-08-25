@@ -3,7 +3,12 @@ package com.bridgelabz.logicalprograms;
 import java.util.Scanner;
 
 public class TemperatureConversion {
-	
+	public static void temperatureConversion(double temperature,int option) {
+		if(option == 1)
+			conversionToFahrenheit(temperature);
+		else
+			conversionToCelsius(temperature);
+	}
 	public static void conversionToFahrenheit(double temperature) {
 			double fahrenheit = (temperature*9/5)+32;
 			System.out.println("Temperature in fahrenheit : "+fahrenheit);
@@ -22,12 +27,12 @@ public class TemperatureConversion {
 		case 1:
 			System.out.println("Enter the temperature in celsius : ");
 			double celsius = sc.nextDouble();
-			conversionToFahrenheit(celsius);
+			temperatureConversion(celsius,option);
 			break;
 		case 2:
 			System.out.println("Enter the temperature in fahrenheit : ");
 			double fahrenheit = sc.nextDouble();
-			conversionToCelsius(fahrenheit);
+			temperatureConversion(fahrenheit,option);
 			break;
 		default :
 			System.out.println("Invalid Option");
